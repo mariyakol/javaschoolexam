@@ -11,7 +11,7 @@ public class Calculator {
      *                  Example: <code>(1 + 38) * 4.5 - 1 / 2.</code>
      * @return string value containing result of evaluation or null if statement is invalid
      */
-    public String evaluate(final String statement) {
+    public String evaluate(String statement) {
         if (statement == null || statement.isEmpty()) {
             return null;
         }

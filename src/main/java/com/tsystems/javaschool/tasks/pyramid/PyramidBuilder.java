@@ -14,7 +14,7 @@ public class PyramidBuilder {
      * @return 2d array with pyramid inside
      * @throws {@link CannotBuildPyramidException} if the pyramid cannot be build with given input
      */
-    public int[][] buildPyramid(final List<Integer> inputNumbers) {
+    public int[][] buildPyramid(List<Integer> inputNumbers) {
         int listSize = inputNumbers.size();
         double root = getRoot(listSize);
         if (inputNumbers.isEmpty() || inputNumbers.contains(null) || root % 1 != 0) {
@@ -44,7 +44,7 @@ public class PyramidBuilder {
         return pyramidArray;
     }
 
-    private static double getRoot(final int size) {
+    private static double getRoot(int size) {
         final double a = 0.5;
         final double b = 1.5;
         final double c = 1;

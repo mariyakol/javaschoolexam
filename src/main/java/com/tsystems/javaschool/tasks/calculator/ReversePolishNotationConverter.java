@@ -8,7 +8,7 @@ public class ReversePolishNotationConverter {
     private ArrayDeque<Character> stack = new ArrayDeque<>();
     private String statement;
 
-    ReversePolishNotationConverter(final String statement) {
+    ReversePolishNotationConverter(String statement) {
         this.statement = statement;
     }
 
@@ -69,7 +69,7 @@ public class ReversePolishNotationConverter {
         stack.pollFirst();
     }
 
-    private void processOperation(final int i, final Character currentSymbol) {
+    private void processOperation(int i, Character currentSymbol) {
         if (Character.isDigit(statement.charAt(i + 1)) || statement.charAt(i + 1) == '(') {
             while (!stack.isEmpty()) {
                 char ch = stack.getFirst();
@@ -87,7 +87,7 @@ public class ReversePolishNotationConverter {
         }
     }
 
-    private static int getPriority(final char operation) {
+    private static int getPriority(char operation) {
         switch (operation) {
             case '*':
             case '/':

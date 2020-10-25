@@ -27,7 +27,7 @@ public class CalculatorImpl {
         return getStringResult(result);
     }
 
-    private void processEntry(final String entry) {
+    private void processEntry(String entry) {
         try {
             Double number = Double.parseDouble(entry);
             numbersStack.addFirst(number);
@@ -36,12 +36,12 @@ public class CalculatorImpl {
         }
     }
 
-    private void processOperation(final String entry) {
+    private void processOperation(String entry) {
         Operation operation = getOperation(entry);
         operation.performOperation(numbersStack);
     }
 
-    private static Operation getOperation(final String entry) {
+    private static Operation getOperation(String entry) {
         switch (entry) {
             case "+":
                 return new Addition();
